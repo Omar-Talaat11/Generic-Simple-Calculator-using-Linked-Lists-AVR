@@ -1,0 +1,36 @@
+18:19:45 **** Incremental Build of configuration Debug for project Simple_Calculator ****
+make all 
+Building file: ../linked_list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"linked_list.d" -MT"linked_list.o" -c -o "linked_list.o" "../linked_list.c"
+In file included from ../linked_list.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../linked_list.c
+ 
+Building target: Simple_Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Simple_Calculator.map -mmcu=atmega32 -o "Simple_Calculator.elf"  ./Functions.o ./gpio.o ./keypad.o ./lcd.o ./linked_list.o ./main.o   
+Finished building target: Simple_Calculator.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Simple_Calculator.elf  >"Simple_Calculator.lss"
+Finished building: Simple_Calculator.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Simple_Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13938 bytes (42.5% Full)
+(.text + .data + .bootloader)
+
+Data:         36 bytes (1.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:19:46 Build Finished. 0 errors, 1 warnings. (took 1s.226ms)
+
